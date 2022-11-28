@@ -22,3 +22,26 @@ sh path/backup-cleaner.sh
 # Every day at 00:30
 30 0   *   *   *    sh /path/backup-cleaner.sh
 ```
+
+## And it is possible without automation
+### Backup Database
+```bash
+# Generate sql
+docker exec -t <DOCKER_SWARM_SERVICE_NAME> pg_dumpall -c -U <POSTGRES_USER> > dump_$(date +%Y-%m-%d_%H_%M_%S).sql
+```
+
+```bash
+# Generate compressed backup
+docker exec -t <DOCKER_SWARM_SERVICE_NAME> pg_dumpall -c -U <POSTGRES_USER> | gzip > ./dump_$(date +"%Y-%m-%d_%H_%M_%S").gz
+```
+
+### Restore Database
+```bash
+# Restore from sql
+cat your_dump.sql | docker exec -i <DOCKER_SWARM_SERVICE_NAME> psql -U <POSTGRES_USER> -d <POSTGRES_DB>
+```
+
+```bash
+# Restore from compressed sql
+gunzip < your_dump.sql.gz | docker exec -i <DOCKER_SWARM_SERVICE_NAME> psql -U <POSTGRES_USER> -d <POSTGRES_DB>
+```
