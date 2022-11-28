@@ -11,6 +11,10 @@ Here you'll find templates, and configurations for various tools, and technologi
 
 > Псс, ребята. Тут русскоязычная версия тоже есть)) 🤫
 
+## Other Resources
+-   [Boilerplates](https://github.com/Mark1708/boilerplates) - Templates for various projects
+
+
 ## Contact
 Created by [Gurianov Mark](https://mark1708.github.io/) - feel free to contact me!
 #### +7(962)024-50-04 | mark1708.work@gmail.com | [github](http://github.com/Mark1708)
