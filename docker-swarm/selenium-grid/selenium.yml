@@ -1,6 +1,28 @@
 version: '3'
 
 services:  
+  chrome:
+    image: selenium/node-chrome:4.6.0-20221104
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_SESSION_TIMEOUT=120
+      - SE_NODE_MAX_SESSIONS=2
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints: 
+          - node.role == worker
+    entrypoint: bash -c 'SE_OPTS="--host $$HOSTNAME" /opt/bin/entry_point.sh'
+    volumes:
+      - /dev/urandom:/dev/random
+      - /dev/shm:/dev/shm
+    networks:
+      - selenium
+
   firefox:
     image: selenium/node-firefox:4.6.0-20221104
     environment:
