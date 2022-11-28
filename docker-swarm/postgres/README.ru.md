@@ -1,16 +1,16 @@
 # postgres
 
-## Using
+## Использование
 ```bash
-# Create volume dir
+# Создать каталог томов
 sudo mkdir -p /mnt/db-data
 
-# Create label
+# Создать ярлык
 docker node update --label-add db=true ID
 
-# Create network
+# Создать сеть
 docker network create --driver overlay backend
 
-# Deploy stack
+# Развернуть стек
 docker stack deploy -c postgres.yml postgres
 ```

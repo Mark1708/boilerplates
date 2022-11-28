@@ -1,10 +1,10 @@
 # selenium-grid
 
-## Using
+## Использование
 ```bash
-# Create network
+# Создать сеть
 docker network create --driver overlay selenium
 
-# Deploy stack
+# Развернуть стек
 docker stack deploy -c selenium.yml selenium
 ```

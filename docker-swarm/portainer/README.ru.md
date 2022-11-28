@@ -1,13 +1,13 @@
 # portainer
 
-## Using
+## Использование
 ```bash
-#Create volume dir
+# Создать каталог томов
 sudo mkdir -p /mnt/portainer
 
-# Create network
+# Создать сеть
 docker network create --driver overlay portainer
 
-# Deploy stack
+# Развернуть стек
 docker stack deploy -c portainer.yml portainer
 ```

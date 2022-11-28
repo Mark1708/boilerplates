@@ -10,7 +10,7 @@ sudo mkdir -p /mnt/nginx-mysql
 # Create network
 docker network create --driver overlay npm-public
 
-# Deploy service
+# Deploy stack
 docker stack deploy -c nginx-proxy-manager.yml npm
 ```
 

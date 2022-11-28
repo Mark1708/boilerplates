@@ -1,12 +1,12 @@
 # grafana-prometheus-cadvisor
 
-> Configuration for 1 manager and 2 workers
+> Конфигурация для 1 менеджера и 2 работников
 
-## Using
+## Использование
 ```bash
 # Create network
 docker network create --driver overlay monitoring
 
-# Deploy stack
+# Deploy service
 docker stack deploy -c docker-stack.yml monitoring
 ```

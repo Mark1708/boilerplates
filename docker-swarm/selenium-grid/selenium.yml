@@ -10,7 +10,7 @@ services:
       - SE_NODE_SESSION_TIMEOUT=120
       - SE_NODE_MAX_SESSIONS=2
     deploy:
-      replicas: 3
+      replicas: 2
       restart_policy:
         condition: on-failure
       placement:
@@ -32,7 +32,7 @@ services:
       - SE_NODE_SESSION_TIMEOUT=120
       - SE_NODE_MAX_SESSIONS=2
     deploy:
-      replicas: 3
+      replicas: 2
       restart_policy:
         condition: on-failure
       placement:
