@@ -66,9 +66,9 @@
                 url: "https://github.com/docker/compose/releases/download/{{ page.json.tag_name }}/docker-compose-Linux-x86_64"
                 dest: /usr/local/bin/docker-compose
                 mode: 0755
-    - name: Создание и настройка пользователя
+    - name: Creating and configuring a user
       block:
-        - name: Создание пользователя
+        - name: Creating a user
           user: 
             name: "{{ created_username }}"
             password: "{{ created_pass | password_hash('sha512') }}"
