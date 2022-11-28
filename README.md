@@ -12,7 +12,8 @@ Here you'll find templates, and configurations for various tools, and technologi
 > Псс, ребята. Тут русскоязычная версия тоже есть)) 🤫
 
 ## Other Resources
--   [Boilerplates](https://github.com/Mark1708/boilerplates) - Templates for various projects
+-   [Cheat-Sheets](https://github.com/Mark1708/cheat-sheets) - Command Reference for various tools and technologies
+-   [Habr](https://habr.com/ru/users/Mark1708/posts) - Here I sometimes write about something interesting
 
 
 ## Contact
