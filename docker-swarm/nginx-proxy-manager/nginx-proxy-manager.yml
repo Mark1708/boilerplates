@@ -8,8 +8,8 @@ services:
       - '443:443'
       - '81:81'
     environment:
-      DB_MYSQL_HOST: "npm"
-      DB_MYSQL_PORT: "npm"
+      DB_MYSQL_HOST: "npm-db"
+      DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: "npm"
       DB_MYSQL_PASSWORD: "npm"
       DB_MYSQL_NAME: "npm"
