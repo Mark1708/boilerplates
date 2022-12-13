@@ -1,0 +1,11 @@
+FROM gradle:4.7.0-jdk8-alpine AS builder
+
+COPY --chown=gradle:gradle ./ ./
+RUN gradle build --no-daemon
+
+FROM openjdk:8-jre-slim
+
+COPY --from=builder /build/libs/service-name.jar /app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app.jar"]
+ 
